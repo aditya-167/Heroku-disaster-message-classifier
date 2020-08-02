@@ -15,7 +15,6 @@ from plotly.graph_objs import Bar
 from sqlalchemy import create_engine
 
 from herokutokenizer import Tokenizer, StartingVerbExtractor
-app = Flask(__name__)
 '''
 class Begin_verb(BaseEstimator, TransformerMixin):
   
