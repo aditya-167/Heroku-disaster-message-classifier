@@ -1,7 +1,7 @@
 import json
 import plotly
 import pandas as pd
-
+from appfile import app
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk import pos_tag, word_tokenize
@@ -36,11 +36,11 @@ class Begin_verb(BaseEstimator, TransformerMixin):
 '''
 
 # load data
-engine = create_engine('sqlite:///data/DisasterResponse.db')
+engine = create_engine('sqlite:///appfile/data/DisasterResponse.db')
 df = pd.read_sql_table('ResponseTable', engine)
 
 # load model
-model = joblib.load("models/classifier.pkl")
+model = joblib.load("appfile/models/classifier.pkl")
 
 
 # index webpage displays cool visuals and receives user input text for model
