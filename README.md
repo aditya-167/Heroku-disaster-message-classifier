@@ -1,17 +1,15 @@
-# Disaster Response Pipeline Project
-
+# Disaster Response Message CLassifier Heroku Deployment
 ### Instructions:
-1. Run the following commands in the project's root directory to set up your database and model.
+This Repo contains Heroku app deployment process. This is extention from this repo https://github.com/aditya-167/NLP-Disaster-Response-Application
 
-    - To run ETL pipeline that cleans data and stores in database
-        `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
-    - To run ML pipeline that trains classifier and saves
-        `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
+Initially this was part of the same repository, but due to database file conflicts, The deployment part was shifted to seperate repo and was processed.
 
-2. Run the following command in the app's directory to run your web app.
-    `python run.py`
+This repo is similar to previous one but no notebook directory and only contains
 
-3. Go to http://0.0.0.0:3001/
+1. App - application folder of flask
 
+2. nltk.txt (needed for nltk download during heroku deployment)
 
-gunicorn==20.0.4
+3. requirement.txt - app requirements (run $pip install -r requirements)
+
+Web Application Link - https://my-disaster-app.herokuapp.com/
